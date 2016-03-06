@@ -33,6 +33,6 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index']);
+    Route::get('/',['as' => 'home', 'uses' => 'HomeController@index']);
     Route::resource('/profile', 'ProfilesController');
 });
