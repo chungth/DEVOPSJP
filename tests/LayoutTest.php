@@ -4,16 +4,17 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class LayoutTest extends TestCase
 {
     /**
      * A basic functional test example.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testTopNav()
     {
         $this->visit('/')
-             ->see('Laravel 5');
+             ->seeInElement('.navbar-brand','OJIOBA')
+             ->seeInElement('.navbar-right','作成');
     }
 }
