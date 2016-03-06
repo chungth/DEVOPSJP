@@ -5,6 +5,7 @@
     @foreach($profiles as $profile)
     <div class="row panel">
         <div class="col-md-4 bg_blur ">
+            <img src="/image/bg-{{$profile->id}}.jpg" width="100%" height="100%">
             <a href="#" class="follow_btn hidden-xs">Follow</a>
         </div>
         <div class="col-md-8  col-xs-12">
