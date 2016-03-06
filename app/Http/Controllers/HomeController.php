@@ -4,6 +4,7 @@ namespace OjiOba\Http\Controllers;
 
 use OjiOba\Http\Requests;
 use Illuminate\Http\Request;
+use OjiOba\Profile;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //TODO: paginate profile
+        $profiles = Profile::all();
+        return view('home',compact('profiles'));
     }
 }
