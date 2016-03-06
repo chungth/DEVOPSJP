@@ -1,11 +1,5 @@
 <<<<<<< HEAD
 # OJI-CHAN & OBA-CHAN genki project
-=======
-# Laravel PHP Framework
-# hoge
-# fuga
->>>>>>> b7800b192955da65affdaee34a15acfc221053ae
-
 当リポジトリは、日本のおじいちゃんとおばあちゃんを元気にするため、名物おじいちゃんとおばあちゃんを紹介するサイト「おじいちゃん＆おばあちゃん元気プロジェクト」サイト用リポジトリです。
 
 # メンバー
