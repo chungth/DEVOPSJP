@@ -2,19 +2,25 @@
 
 @section('content')
 <div class="container">
-    @for($i=0; $i < 10; $i++)
+    @foreach($profiles as $profile)
     <div class="row panel">
         <div class="col-md-4 bg_blur ">
             <a href="#" class="follow_btn hidden-xs">Follow</a>
         </div>
         <div class="col-md-8  col-xs-12">
-            <img src="/image/mock-1.jpg" class="img-thumbnail picture hidden-xs" />
-            <img src="/image/mock-1.jpg" class="img-thumbnail visible-xs picture_mob" />
+            <img src="/image/ava-{{$profile->id}}.jpg" class="img-thumbnail picture hidden-xs" />
+            <img src="/image/ava-{{$profile->id}}.jpg" class="img-thumbnail visible-xs picture_mob" />
             <div class="header">
-                <h1>叔父さん</h1>
-                <h4>Web Developer</h4>
-                <span>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</span>
+                <h1>{{ $profile->family_name.$profile->given_name}} さん</h1>
+                <h4>{{ $profile->prefecture }}・
+                    {{ $profile->age }}才・
+                    {{ $profile->sex }}・
+                    {{ $profile->attribute }}・
+                    オススメ度:{{ $profile->recommendation_ranking }}
+                </h4>
+                <span>
+                    {{ $profile->best_technique }}
+                </span>
             </div>
 
             <div class="row nav">
@@ -28,6 +34,6 @@
         </div>
     </div>
 
-    @endfor
+    @endforeach
 </div>
 @endsection
